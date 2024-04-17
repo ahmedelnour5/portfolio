@@ -42,7 +42,7 @@ export default function Home() {
 
 const LinkIcon = ({ to, tipTitle, children }) => {
   return (
-    <Link href={to}>
+    <Link href={to} className="hover:text-red-600">
       <Tooltip title={tipTitle} placement="bottom">
         <IconButton>{children}</IconButton>
       </Tooltip>

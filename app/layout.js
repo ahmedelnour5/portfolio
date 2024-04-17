@@ -36,16 +36,16 @@ const Header = () => {
 const Nav = () => {
   return (
     <div className="hidden md:flex">
-      <Link className="mx-4 hover:border-b-2 border-white" href={"/experience"}>
+      <Link className="mx-4 hover:text-red-600" href={"/experience"}>
         Experience
       </Link>
-      <Link className="mx-4 hover:border-b-2 border-white" href={"/projects"}>
+      <Link className="mx-4 hover:text-red-600" href={"/projects"}>
         Projects
       </Link>
-      <Link className="mx-4 hover:border-b-2 border-white" href={"/skills"}>
+      <Link className="mx-4 hover:text-red-600" href={"/skills"}>
         Skills
       </Link>
-      <Link className="mx-4 hover:border-b-2 border-white" href={"/contact"}>
+      <Link className="mx-4 hover:text-red-600" href={"/contact"}>
         Contact
       </Link>
     </div>
