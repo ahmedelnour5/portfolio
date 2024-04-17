@@ -1,6 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 
 mongoose.connect(process.env.MONGO_URI);
+mongoose.Promise = global.Promise;
 
 const experienceSchema = Schema({
   organization: String,
@@ -11,6 +12,7 @@ const experienceSchema = Schema({
   description: [String],
 });
 
-const Experience = mongoose.model("Experience", experienceSchema);
+const Experience =
+  mongoose.models.Experience || mongoose.model("Experience", experienceSchema);
 
 export default Experience;
