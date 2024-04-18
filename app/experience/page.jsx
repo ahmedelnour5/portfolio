@@ -1,5 +1,5 @@
 import React from "react";
-import ExperienceDisplay from "../(components)/ExperienceDisplay";
+import ExperienceCard from "../(components)/ExperienceCard";
 
 const getExperiences = async () => {
   try {
@@ -25,10 +25,10 @@ const Experience = async () => {
   const experiences = data.experiences;
 
   return (
-    <div className="container mx-auto min-h-screen mt-4 py-8">
-      <div className="space-y-7 flex flex-col justify-center items-center">
+    <div className="p-8">
+      <div className="grid grid-cols-1 grid-rows-3 gap-6">
         {experiences.map((experience) => (
-          <ExperienceDisplay key={experience._id} experience={experience} />
+          <ExperienceCard key={experience._id} experience={experience} />
         ))}
       </div>
     </div>
