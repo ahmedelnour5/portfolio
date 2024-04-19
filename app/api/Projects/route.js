@@ -1,4 +1,4 @@
-import Projects from "@/app/projects/page";
+import Project from "@/app/(models)/Project";
 import { NextResponse } from "next/server";
 
 export async function GET() {
