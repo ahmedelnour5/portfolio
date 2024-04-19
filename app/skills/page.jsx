@@ -25,10 +25,12 @@ const Skills = async () => {
   const skills = data.skills;
 
   return (
-    <div className="">
-      {skills.map((skill) => (
-        <SkillsCard key={skill._id} skill={skill} />
-      ))}
+    <div className="min-h-screen flex flex-col justify-center items-center py-12">
+      <div className="grid grid-cols-1 gap-6">
+        {skills.map((skill) => (
+          <SkillsCard key={skill._id} skill={skill} />
+        ))}
+      </div>
     </div>
   );
 };

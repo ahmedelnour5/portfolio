@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const ProjectCard = ({ project }) => {
   return (
-    <div className="bg-white shadow-md text-black rounded-lg p-4 max-w-4xl h-auto">
-      <div className="flex flex-col">
+    <div className="bg-white shadow-md text-black rounded-lg p-8 max-w-4xl h-auto">
+      <div className="flex flex-col space-y-1">
         <h2 className="font-bold text-lg">{project.projectTitle}</h2>
         <div className="flex justify-between">
           <h3 className="font-bold text-md">{project.projectType}</h3>
@@ -17,9 +17,9 @@ const ProjectCard = ({ project }) => {
         <Link href={project.projectLink} className="text-gray-500 underline">
           Link
         </Link>
-        <ul className="text-gray-500 list-disc list-inside text-sm">
-          {project.description.map((desc) => (
-            <li>{desc}</li>
+        <ul className="text-gray-500 list-disc list-inside text-sm ">
+          {project.description.map((desc, index) => (
+            <li key={index}>{desc}</li>
           ))}
         </ul>
       </div>

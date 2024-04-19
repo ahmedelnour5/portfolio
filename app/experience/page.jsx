@@ -25,7 +25,7 @@ const Experience = async () => {
   const experiences = data.experiences;
 
   return (
-    <div className="p-8">
+    <div className="p-24">
       <div className="grid grid-cols-1 grid-rows-3 gap-6">
         {experiences.map((experience) => (
           <ExperienceCard key={experience._id} experience={experience} />

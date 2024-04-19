@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen">
       <div className="flex flex-col items-center justify-center  w-full space-y-9">
-        <h1 className="text-5xl md:text-7xl font-semibold">Ahmed Elnour</h1>
+        <h1 className="text-5xl md:text-7xl font-bold">Ahmed Elnour</h1>
         <h2 className="text-xl md:text-2xl font-medium">
           Full-Stack Developer
         </h2>

@@ -19,6 +19,7 @@ import {
   SiGit,
   SiCsharp,
   SiMysql,
+  SiJirasoftware,
 } from "react-icons/si";
 import { DiJava } from "react-icons/di";
 import SkillTip from "./SkillTip";
@@ -46,16 +47,19 @@ const SkillsCard = ({ skill }) => {
     HTML5: <SiHtml5 />,
     Express: <SiExpress />,
     "C#": <SiCsharp />,
+    Jira: <SiJirasoftware />,
   };
   return (
-    <div className="bg-white rounded-xl shadow-lg p-4 max-w-4xl text-black">
-      <h2>{skill.technologyType}</h2>
-      <div className="flex justify-between items-center">
-        {skill.skills.map((s, index) => (
-          <SkillTip key={index} skill={s}>
-            {iconMap[s]}
-          </SkillTip>
-        ))}
+    <div className="bg-white rounded-xl shadow-lg p-12 max-w-5xl text-black">
+      <div className="flex flex-col justify-between">
+        <h2 className="mb-4">{skill.technologyType}</h2>
+        <div className="flex justify-between items-center space-x-2">
+          {skill.skills.map((s, index) => (
+            <SkillTip key={index} skill={s}>
+              {iconMap[s]}
+            </SkillTip>
+          ))}
+        </div>
       </div>
     </div>
   );
