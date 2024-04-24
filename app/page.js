@@ -13,7 +13,7 @@ export default function Home() {
         <h2 className="text-xl md:text-2xl font-medium">
           Full-Stack Developer
         </h2>
-        <div className="flex items-end">
+        <div className="flex items-end justify-center">
           <LinkIcon
             to="https://github.com/ahmedelnour5"
             tipTitle="Github"

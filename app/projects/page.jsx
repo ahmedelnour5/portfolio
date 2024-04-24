@@ -25,7 +25,7 @@ const Project = async () => {
   const projects = data.projects;
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen flex items-center justify-center p-8 md:p-0">
       <div className="grid grid-cols-1 gap-6 justify-center">
         {projects.map((project) => (
           <ProjectCard key={project._id} project={project} />

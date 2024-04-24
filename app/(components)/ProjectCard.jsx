@@ -10,9 +10,9 @@ const ProjectCard = ({ project }) => {
           <h3 className="font-bold text-md">{project.projectType}</h3>
           <span>{project.dates}</span>
         </div>
-        <div className="flex justify-between text-gray-500">
+        <div className="flex flex-col md:flex-row justify-between text-gray-500">
           <span>{project.role}</span>
-          <span>{project.technologies}</span>
+          <span className="text-sm md:text-base">{project.technologies}</span>
         </div>
         <Link href={project.projectLink} className="text-gray-500 underline">
           Link

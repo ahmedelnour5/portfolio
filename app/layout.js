@@ -1,5 +1,6 @@
 import "./globals.css";
 import Link from "next/link";
+import Header from "./(components)/Header";
 
 export const metadata = {
   title: "medElnour",
@@ -18,36 +19,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
-const Header = () => {
-  return (
-    <div className="w-full mx-auto sticky top-0">
-      <div className="container mx-auto flex justify-between  p-5 items-end flex-wrap">
-        <Link href={"/"} className="hover:cursor-pointer hover:text-red-600">
-          <span className="text-4xl font-semibold">medElnour</span>
-        </Link>
-
-        <Nav />
-      </div>
-    </div>
-  );
-};
-
-const Nav = () => {
-  return (
-    <div className="hidden md:flex">
-      <Link className="mx-4 hover:text-red-600" href={"/experience"}>
-        Experience
-      </Link>
-      <Link className="mx-4 hover:text-red-600" href={"/projects"}>
-        Projects
-      </Link>
-      <Link className="mx-4 hover:text-red-600" href={"/skills"}>
-        Skills
-      </Link>
-      <Link className="mx-4 hover:text-red-600" href={"/contact"}>
-        Contact
-      </Link>
-    </div>
-  );
-};

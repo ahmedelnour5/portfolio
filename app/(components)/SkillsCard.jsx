@@ -52,8 +52,8 @@ const SkillsCard = ({ skill }) => {
   return (
     <div className="bg-white rounded-xl shadow-lg p-12 max-w-5xl text-black">
       <div className="flex flex-col justify-between">
-        <h2 className="mb-4">{skill.technologyType}</h2>
-        <div className="flex justify-between items-center space-x-2">
+        <h2 className="mb-4 font-bold">{skill.technologyType}</h2>
+        <div className="flex md:justify-between items-center space-x-2 flex-wrap">
           {skill.skills.map((s, index) => (
             <SkillTip key={index} skill={s}>
               {iconMap[s]}
