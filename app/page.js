@@ -1,6 +1,4 @@
-import Link from "next/link";
-import { IconButton } from "@mui/material";
-import { Tooltip } from "@mui/material";
+import LinkIcon from "./(components)/LinkIcon";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ArticleIcon from "@mui/icons-material/Article";
@@ -39,13 +37,3 @@ export default function Home() {
     </main>
   );
 }
-
-const LinkIcon = ({ to, tipTitle, children }) => {
-  return (
-    <Link href={to} className="hover:text-red-600">
-      <Tooltip title={tipTitle} placement="bottom">
-        <IconButton>{children}</IconButton>
-      </Tooltip>
-    </Link>
-  );
-};
