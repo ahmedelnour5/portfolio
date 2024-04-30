@@ -3,7 +3,9 @@ import ProjectCard from "../(components)/ProjectCard";
 
 const getProjects = async () => {
   try {
-    const res = await fetch("http://localhost:3000/api/Projects");
+    const res = await fetch(
+      "https://portfolio-dl1534zxz-ahmedelnour5s-projects.vercel.app/api/Projects"
+    );
 
     if (!res.ok) {
       throw new Error("Failed to fetch projects");
