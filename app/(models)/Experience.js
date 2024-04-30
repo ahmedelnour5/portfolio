@@ -1,9 +1,9 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 mongoose.connect(process.env.MONGO_URI);
 mongoose.Promise = global.Promise;
 
-const experienceSchema = Schema({
+const experienceSchema = new mongoose.Schema({
   organization: String,
   title: String,
   position: String,

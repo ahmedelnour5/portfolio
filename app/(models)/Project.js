@@ -1,8 +1,9 @@
-import mongoose, { Schema } from "mongoose";
+import mongoose from "mongoose";
 
 mongoose.connect(process.env.MONGO_URI);
+mongoose.Promise = global.Promise;
 
-const projectSchema = Schema({
+const projectSchema = new mongoose.Schema({
   projectTitle: String,
   projectType: String,
   role: String,
