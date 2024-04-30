@@ -1,12 +1,18 @@
 import React from "react";
 
-const FormGroup = ({ placeholder, name, value, onChange, id, inputLabel }) => {
+const FormGroup = ({
+  placeholder,
+  name,
+  value,
+  onChange,
+  onBlur,
+  id,
+  inputLabel,
+}) => {
   return (
     <div>
       <label className="block">
-        <span className="block text-sm font-medium text-white">
-          {inputLabel}
-        </span>
+        <span className="block font-medium text-white">{inputLabel}</span>
       </label>
       <input
         className="px-3 py-2 w-full mt-1 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 text-black
@@ -20,6 +26,7 @@ const FormGroup = ({ placeholder, name, value, onChange, id, inputLabel }) => {
         onChange={onChange}
         id={id}
         name={name}
+        onBlur={onBlur}
       ></input>
     </div>
   );

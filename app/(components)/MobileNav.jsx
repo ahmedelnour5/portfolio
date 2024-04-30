@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   return (
     <div className="md:hidden">
       {open ? (
@@ -19,19 +21,39 @@ const MobileNav = () => {
             <CloseIcon />
           </IconButton>
           <div className="flex flex-col text-white text-lg w-full items-center space-y-2 mt-5 pt-14">
-            <Link href={"/"} onClick={() => setOpen(!open)}>
+            <Link
+              className={`${pathname === "/" ? "font-bold" : ""}  `}
+              href={"/"}
+              onClick={() => setOpen(!open)}
+            >
               Home
             </Link>
-            <Link href={"/experience"} onClick={() => setOpen(!open)}>
+            <Link
+              className={` ${pathname === "/experience" ? "font-bold" : ""}  `}
+              href={"/experience"}
+              onClick={() => setOpen(!open)}
+            >
               Experience
             </Link>
-            <Link href={"/projects"} onClick={() => setOpen(!open)}>
+            <Link
+              className={` ${pathname === "/projects" ? "font-bold" : ""}  `}
+              href={"/projects"}
+              onClick={() => setOpen(!open)}
+            >
               Projects
             </Link>
-            <Link href={"/skills"} onClick={() => setOpen(!open)}>
+            <Link
+              className={` ${pathname === "/skills" ? "font-bold" : ""}  `}
+              href={"/skills"}
+              onClick={() => setOpen(!open)}
+            >
               Skills
             </Link>
-            <Link href={"/contact"} onClick={() => setOpen(!open)}>
+            <Link
+              className={` ${pathname === "/contact" ? "font-bold" : ""}  `}
+              href={"/contact"}
+              onClick={() => setOpen(!open)}
+            >
               Contact
             </Link>
           </div>
