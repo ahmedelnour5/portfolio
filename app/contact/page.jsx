@@ -7,7 +7,6 @@ import FormGroup from "../(components)/FormGroup";
 const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [processed, setProcessed] = useState(false);
-  const [message, setMessage] = useState("");
 
   const formik = useFormik({
     initialValues: {
