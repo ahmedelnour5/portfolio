@@ -3,9 +3,7 @@ import SkillsCard from "../(components)/SkillsCard";
 
 const getSkills = async () => {
   try {
-    const res = await fetch(
-      "https://portfolio-dl1534zxz-ahmedelnour5s-projects.vercel.app/api/Skills"
-    );
+    const res = await fetch(process.env.URL + "/api/Skills");
 
     if (!res.ok) {
       throw new Error("Failed to fetch skills");
@@ -13,7 +11,7 @@ const getSkills = async () => {
 
     return res.json();
   } catch (error) {
-    console.log("Error loading experiences: ", error);
+    console.log("Error loading skills: ", error);
   }
 };
 

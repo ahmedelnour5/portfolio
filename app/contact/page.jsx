@@ -27,13 +27,10 @@ const Contact = () => {
     onSubmit: async (values) => {
       try {
         setLoading(true);
-        const res = await fetch(
-          "https://portfolio-dl1534zxz-ahmedelnour5s-projects.vercel.app/api/Contact",
-          {
-            method: "POST",
-            body: JSON.stringify(values, null, 2),
-          }
-        );
+        const res = await fetch(process.env.URL + "/api/Contact", {
+          method: "POST",
+          body: JSON.stringify(values, null, 2),
+        });
 
         if (res.ok) {
           setProcessed(true);

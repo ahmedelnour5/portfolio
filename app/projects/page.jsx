@@ -3,9 +3,7 @@ import ProjectCard from "../(components)/ProjectCard";
 
 const getProjects = async () => {
   try {
-    const res = await fetch(
-      "https://portfolio-dl1534zxz-ahmedelnour5s-projects.vercel.app/api/Projects"
-    );
+    const res = await fetch(process.env.URL + "/api/Projects");
 
     if (!res.ok) {
       throw new Error("Failed to fetch projects");
@@ -13,7 +11,7 @@ const getProjects = async () => {
 
     return res.json();
   } catch (error) {
-    console.log("Error loading experiences: ", error);
+    console.log("Error loading projects: ", error);
   }
 };
 

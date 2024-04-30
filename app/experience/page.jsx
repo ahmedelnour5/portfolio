@@ -3,9 +3,7 @@ import ExperienceCard from "../(components)/ExperienceCard";
 
 const getExperiences = async () => {
   try {
-    const res = await fetch(
-      "https://portfolio-dl1534zxz-ahmedelnour5s-projects.vercel.app/api/Experiences"
-    );
+    const res = await fetch(process.env.URL + "/api/Experiences");
 
     if (!res.ok) {
       throw new Error("Failed to fetch Experiences");
