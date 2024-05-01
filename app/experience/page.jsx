@@ -1,7 +1,6 @@
 import React from "react";
 import ExperienceCard from "../(components)/ExperienceCard";
 
-let message;
 const getExperiences = async () => {
   try {
     const res = await fetch(process.env.URL + "/api/Experiences");
@@ -12,7 +11,8 @@ const getExperiences = async () => {
 
     return res.json();
   } catch (error) {
-    console.log("Error loading experiences: ", error);
+    console.error("Error loading experiences: ", error);
+    return { experiences: [] };
   }
 };
 
@@ -23,7 +23,7 @@ const Experience = async () => {
     return <p>No Experiences.</p>;
   }
 
-  const experiences = data.experiences;
+  const experiences = data.experiences || [];
 
   return (
     <div className="p-8 md:p-24">

@@ -11,7 +11,8 @@ const getProjects = async () => {
 
     return res.json();
   } catch (error) {
-    console.log("Error loading projects: ", error);
+    console.error("Error loading projects: ", error);
+    return { projects: [] };
   }
 };
 
@@ -22,7 +23,7 @@ const Project = async () => {
     return <p>No Projects.</p>;
   }
 
-  const projects = data.projects;
+  const projects = data.projects || [];
 
   return (
     <div className="min-h-screen flex items-center justify-center p-8 md:p-0">

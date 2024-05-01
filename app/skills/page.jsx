@@ -11,7 +11,8 @@ const getSkills = async () => {
 
     return res.json();
   } catch (error) {
-    console.log("Error loading skills: ", error);
+    console.error("Error loading skills: ", error);
+    return { skills: [] };
   }
 };
 
@@ -22,7 +23,7 @@ const Skills = async () => {
     return <p>No skills.</p>;
   }
 
-  const skills = data.skills;
+  const skills = data.skills || [];
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center p-8 md:py-12">
