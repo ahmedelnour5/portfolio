@@ -19,18 +19,22 @@ const getProjects = async () => {
 const Project = async () => {
   const data = await getProjects();
 
-  if (!data?.projects) {
-    return <p>No Projects.</p>;
-  }
-
   const projects = data.projects || [];
+
+  if (!data?.projects) {
+    return <p>No skills.</p>;
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center p-8 md:p-0">
       <div className="grid grid-cols-1 gap-6 justify-center">
-        {projects.map((project) => (
-          <ProjectCard key={project._id} project={project} />
-        ))}
+        {projects.length > 0 ? (
+          projects.map((project) => (
+            <ProjectCard key={project._id} project={project} />
+          ))
+        ) : (
+          <div></div>
+        )}
       </div>
     </div>
   );

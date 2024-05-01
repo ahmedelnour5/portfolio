@@ -28,9 +28,13 @@ const Experience = async () => {
   return (
     <div className="p-8 md:p-24">
       <div className=" grid grid-cols-1 grid-rows-3 gap-6">
-        {experiences.map((experience) => (
-          <ExperienceCard key={experience._id} experience={experience} />
-        ))}
+        {experiences.length > 0 ? (
+          experiences.map((experience) => (
+            <ExperienceCard key={experience._id} experience={experience} />
+          ))
+        ) : (
+          <p>Whoops!</p>
+        )}
       </div>
     </div>
   );
