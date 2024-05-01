@@ -1,9 +1,10 @@
 import React from "react";
 import ProjectCard from "../(components)/ProjectCard";
+import { GET } from "@/app/api/Projects/route";
 
 const getProjects = async () => {
   try {
-    const res = await fetch(process.env.URL + "/api/Projects");
+    const res = await GET();
 
     if (!res.ok) {
       throw new Error("Failed to fetch projects");

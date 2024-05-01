@@ -1,9 +1,10 @@
 import React from "react";
 import ExperienceCard from "../(components)/ExperienceCard";
+import { GET } from "@/app/api/Experiences/route";
 
 const getExperiences = async () => {
   try {
-    const res = await fetch(process.env.URL + "/api/Experiences");
+    const res = await GET();
 
     if (!res.ok) {
       throw new Error("Failed to fetch Experiences");
@@ -12,7 +13,6 @@ const getExperiences = async () => {
     return res.json();
   } catch (error) {
     console.error("Error loading experiences: ", error);
-    return { experiences: [] };
   }
 };
 

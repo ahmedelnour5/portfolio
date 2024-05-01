@@ -1,9 +1,10 @@
 import React from "react";
 import SkillsCard from "../(components)/SkillsCard";
+import { GET } from "@/app/api/Skills/route";
 
 const getSkills = async () => {
   try {
-    const res = await fetch(process.env.URL + "/api/Skills");
+    const res = await GET();
 
     if (!res.ok) {
       throw new Error("Failed to fetch skills");
