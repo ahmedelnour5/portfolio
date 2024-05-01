@@ -3,7 +3,7 @@ import ProjectCard from "../(components)/ProjectCard";
 
 const getProjects = async () => {
   try {
-    const res = await fetch(`${process.env.URL}/api/Projects`);
+    const res = await fetch(process.env.URL + "/api/Projects");
 
     if (!res.ok) {
       throw new Error("Failed to fetch projects");

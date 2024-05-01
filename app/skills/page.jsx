@@ -3,7 +3,7 @@ import SkillsCard from "../(components)/SkillsCard";
 
 const getSkills = async () => {
   try {
-    const res = await fetch(`${process.env.URL}/api/Skills`);
+    const res = await fetch(process.env.URL + "/api/Skills");
 
     if (!res.ok) {
       throw new Error("Failed to fetch skills");

@@ -4,7 +4,7 @@ import ExperienceCard from "../(components)/ExperienceCard";
 let message;
 const getExperiences = async () => {
   try {
-    const res = await fetch(`${process.env.URL}/api/Experiences`);
+    const res = await fetch(process.env.URL + "/api/Experiences");
 
     if (!res.ok) {
       throw new Error("Failed to fetch Experiences");
