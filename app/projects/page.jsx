@@ -13,7 +13,6 @@ const getProjects = async () => {
     return res.json();
   } catch (error) {
     console.error("Error loading projects: ", error);
-    return { projects: [] };
   }
 };
 

@@ -13,7 +13,6 @@ const getSkills = async () => {
     return res.json();
   } catch (error) {
     console.error("Error loading skills: ", error);
-    return { skills: [] };
   }
 };
 
