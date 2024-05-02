@@ -31,7 +31,7 @@ const Skills = async () => {
         {skills.length > 0 ? (
           skills.map((skill) => <SkillsCard key={skill._id} skill={skill} />)
         ) : (
-          <p></p>
+          <p>Whoops</p>
         )}
       </div>
     </div>
