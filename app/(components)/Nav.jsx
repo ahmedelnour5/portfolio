@@ -25,9 +25,9 @@ const Nav = () => {
       </Link>
       <Link
         className={`mx-4 hover:text-red-600 ${
-          pathname === "/skills" ? "font-bold" : ""
+          pathname === "/skill" ? "font-bold" : ""
         }  `}
-        href={"/skills"}
+        href={"/skill"}
       >
         Skills
       </Link>
