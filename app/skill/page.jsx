@@ -16,7 +16,7 @@ const getSkills = async () => {
   }
 };
 
-const Skills = async () => {
+const Skill = async () => {
   const data = await getSkills();
 
   if (!data?.skills) {
@@ -38,4 +38,4 @@ const Skills = async () => {
   );
 };
 
-export default Skills;
+export default Skill;

@@ -12,11 +12,7 @@ export default function Home() {
           Full-Stack Developer
         </h2>
         <div className="flex items-end justify-center">
-          <LinkIcon
-            to="https://github.com/ahmedelnour5"
-            tipTitle="Github"
-            Icon={GitHubIcon}
-          >
+          <LinkIcon to="https://github.com/ahmedelnour5" tipTitle="Github">
             <GitHubIcon sx={{ color: "#ffffff", fontSize: 50 }} />
           </LinkIcon>
 
