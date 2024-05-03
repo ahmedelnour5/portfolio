@@ -1,5 +1,5 @@
 import React from "react";
-import SkillsCard from "../(components)/SkillsCard";
+import SkillsCard from "@/app/(components)/SkillsCard";
 import { GET } from "@/app/api/Skills/route";
 
 const getSkills = async () => {

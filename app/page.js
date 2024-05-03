@@ -1,7 +1,7 @@
-import LinkIcon from "./(components)/LinkIcon";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import ArticleIcon from "@mui/icons-material/Article";
+import LinkIcon from "@/app/(components)/LinkIcon";
+import { GitHubIcon } from "@mui/icons-material";
+import { LinkedInIcon } from "@mui/icons-material";
+import { ArticleIcon } from "@mui/icons-material";
 
 export default function Home() {
   return (

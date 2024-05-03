@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
+import { IconButton, Tooltip } from "@mui/material";
 
 const LinkIcon = ({ to, tipTitle, children }) => {
   return (
