@@ -1,6 +1,6 @@
 import React from "react";
 import LinkIcon from "@/app/(components)/LinkIcon";
-import GitHubIcon from "@mui/icons-material/Github";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ArticleIcon from "@mui/icons-material/Article";
 
