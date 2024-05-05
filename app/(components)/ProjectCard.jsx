@@ -17,7 +17,7 @@ const ProjectCard = ({ project }) => {
         <Link href={project.projectLink} className="text-gray-500 underline">
           Link
         </Link>
-        <ul className="text-gray-500 list-disc list-inside text-sm ">
+        <ul className="text-gray-500 list-disc list-inside text-sm leading-4 space-y-2">
           {project.description.map((desc, index) => (
             <li key={index}>{desc}</li>
           ))}

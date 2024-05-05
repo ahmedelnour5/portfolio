@@ -43,8 +43,8 @@ const MobileNav = () => {
               Projects
             </Link>
             <Link
-              className={` ${pathname === "/skills" ? "font-bold" : ""}  `}
-              href={"/skills"}
+              className={` ${pathname === "/skill" ? "font-bold" : ""}  `}
+              href={"/skill"}
               onClick={() => setOpen(!open)}
             >
               Skills

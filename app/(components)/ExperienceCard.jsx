@@ -30,7 +30,7 @@ const ExperienceCard = ({ experience }) => {
             <span className="text-sm md:text-base">{experience.position}</span>
             <span className="text-sm md:text-base">{experience.location}</span>
           </div>
-          <ul className=" text-gray-500 list-disc list-outside text-sm px-4 text-pretty">
+          <ul className=" text-gray-500 list-disc list-outside text-sm px-4 text-pretty leading-4 space-y-2">
             {experience.description.map((desc, index) => (
               <li key={index}>{desc}</li>
             ))}

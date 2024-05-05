@@ -52,10 +52,10 @@ const Contact = () => {
       )}
       {!processed && (
         <form
-          className="flex flex-col space-y-2"
+          className="w-full md:w-auto px-2 flex flex-col space-y-2"
           onSubmit={formik.handleSubmit}
         >
-          <div className="w-full flex space-x-2">
+          <div className="flex-col w-full flex lg:flex-row lg:space-x-2">
             <div className="flex flex-col">
               <FormGroup
                 inputLabel="First Name:"
